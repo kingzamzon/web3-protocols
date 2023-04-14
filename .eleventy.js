@@ -1,4 +1,9 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("docs/assets/");
+  eleventyConfig.addPassthroughCopy("docs/css/");
+
+  eleventyConfig.addWatchTarget("docs/css/");
+
   return {
     dir: {
       input: "docs",
